@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:Examen_Mvvm.ViewModels"
+             x:Class="Examen_Mvvm.Views.CuadraticaMain"
+             Title="Calculando con Fórmula Cuadrática">
+    <ContentPage.BindingContext>
+        <viewModel:CuadraticaFormViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+            <Label Text="Ingrese el número A: "/>
+            <Entry Text="{Binding A}" Keyboard="Numeric"/>
+
+            <Label Text="Ingrese el número B: "/>
+            <Entry Text="{Binding B}" Keyboard="Numeric"/>
+
+            <Label Text="Ingrese el número C: "/>
+            <Entry Text="{Binding C}" Keyboard="Numeric"/>
+
+            <Button Text="Calcular cuadrática" Command="{Binding CalcularCommand}" BackgroundColor="Green"/>
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="Red"/>
+
+            <Label Text="Resusltado X1:" />
+            <Entry Text="{Binding X1}" IsReadOnly="True"/>
+
+            <Label Text="Resusltado X2:" />
+            <Entry Text="{Binding X2}" IsReadOnly="True"/>
+
+    </VerticalStackLayout>
+</ContentPage>
